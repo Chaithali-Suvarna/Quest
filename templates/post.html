@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Post</title>
+  <link rel="stylesheet" href="{% static 'css/post.css'%}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body class="body" style="background-image: url({% static 'images/17.png'%});background-repeat:no-repeat;opacity:0.8;">
+{% block content %}
+  <center><h1 style="color:#781B5C;"class="heading">Quest!</h1></center>
+  <form action="post" method="post" enctype="multipart/form-data">
+       {% csrf_token %}
+    <div class="inputData">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." required><br><br>
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email.." required><br><br>
+      <label for="lname">PhoneNo</label>
+      <input type="text" id="phone" name="phone" placeholder="Your phone number.." required><br><br>
+      <label for="country">Country</label>
+      <select style="position: relative; left: 160px;" id="country" name="country"required>
+        <option value="india">India</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="australia">Australia</option>
+      </select><br><br>
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" placeholder="Your city.."required><br><br>
+    </div>
+    <div class="right inputData">
+      <label for="category">Category</label>
+      <select style="position: relative; left: 160px;" id="category" name="category"required>
+        <option value="Community">Community</option>
+        <option value="Job">Job</option>
+        <option value="Sale">For Sale</option>
+        <option value="Housing">Housing</option>
+        <option value="Personals">Personals</option>
+        <option value="Discussion forums">Discussion forums</option>
+      </select><br><br>
+      <label for="lname">Post Title</label>
+      <input type="text" id="title" name="posttitle" placeholder="Post Title.." required><br><br>
+
+      <label for="subject">Description</label>
+      <textarea id="subject" name="description" placeholder="Write something.." style="position: relative; left: 160px; width:800px; height: 350px;" required></textarea><br><br>
+
+      <label for="image">Add Image</label>
+      <input type="file" name="image" placeholder="Upload image" required><br><br>
+
+      <label for="price">Price</label>
+      <input type="price" id="price" name="price" placeholder="Price.." required><br><br>
+
+    </div>
+  <center>
+    <button style="position: relative; bottom: 50px; background-color: #b30000;" type="submit" class="button btn-outline-light btn-lg download-button">Submit</button>
+    <button style="position: relative; bottom: 50px;   background-color: #F1C40F ;" type="submit" class="button btn-outline-light btn-lg download-button"><a style="color:white;" href="/">Logout</a></button>
+    <button style="position: relative; bottom: 50px; background-color: #45B39D ;" type="button" class= "button btn-outline-light btn-lg download-button" ><a style="color:white;" href="search">Edit Post</a></button>
+
+
+      {% for message in messages %}
+        <h3 style="color:#CA1B2B "> {{message}} </h3>
+        {% endfor %}
+
+</center>
+
+ </form>
+{% endblock %}
+</body>
+
+</html>

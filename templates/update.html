@@ -1,0 +1,30 @@
+{% extends 'post.html' %}
+{%load static %}
+
+{% block content %}
+<style>
+
+    .update{
+    position: relative;
+    top: 250px;
+
+    }
+</style>
+<div class="update">
+
+<h2>Update Post</h2><br><br>
+
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    <table>
+    {{ form.as_table }}
+    </table>
+
+    <input type="submit" name="Update " style="width: 100px;">
+    </form>
+</div>
+
+
+{% endblock %}

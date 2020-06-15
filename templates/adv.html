@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adv</title>
+  <link rel="stylesheet" href="{% static 'css/adv.css'%}">
+  <link rel="shortcut icon" type="image/png" href="{ % static 'images/favicon.png'%}">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        .img1{
+  border-radius: 50%
+}
+
+h1{
+  font-size: 100px;
+}
+
+.btn{
+  padding: 10px;
+  font-size: 30px;
+  margin: 50px;
+  border: 1px solid black;
+}
+.btn:hover {background-color: #fff}
+
+.button{
+  padding: 10px;
+  font-size: 30px;
+  margin: 50px;
+  border: 1px solid black;
+}
+.button:hover {background-color: #1D6423}
+
+
+.white-section {
+ padding: 0;
+ margin: 0;
+ background-color: #fff;
+}
+
+
+.testimonial-image {
+  width: 50%;
+  border-radius: 0%;
+  margin: 20px;
+}
+    </style>
+
+</head>
+<body style="background-color:#fdf2e9 ">
+  <h1>Quest</h1>
+  <h2>An Advertisement website with sections devoted to jobs, housing, for sale, items wanted, services, community service, gigs, resumes, and discussion forums.
+    It was a web-based service which later on expanded into other classified categories.
+    As a website, Craigslist is generally safe when it comes to threats such as viruses and identity theft. The online classified ad site uses standard security protocols, has a strict privacy policy.
+    </h2>
+      <center>
+        <div class="imgcontainer">
+          <img class="img1" src="https://i.pinimg.com/originals/a5/2d/9b/a52d9ba54264337baa487a48141a1bcf.gif" width="100" height="100" alt="house" class="gif">
+          <br>
+          <img class="img1" src="https://giffiles.alphacoders.com/209/209562.gif" width="100" height="100" alt="social" class="gif">
+          <img class="img1" src="https://thumbs.gfycat.com/SeveralRespectfulGroundbeetle-small.gif" width="100" height="100" alt="work" class="gif">
+          <img class="img1" src="https://media.giphy.com/media/3oFzmirHZ8ikut2Sty/giphy.gif" width="100" height="100" alt="cycle" class="gif">
+          <br>
+          <br>
+          <img class="img1" src="https://i.gifer.com/DXFK.gif" width="100" height="100" alt="tablet">
+          <img class="img1" src="https://images.adsttc.com/media/images/5862/919e/e58e/ce63/6c00/0866/original/iMac-Flat-Mockup.gif?1482854810" width="100" height="100" alt="laptop" class="gif">
+          <img class="img1" src="https://media0.giphy.com/media/Ohs4AkxKWLSDe/source.gif" width="100" height="100" alt="car" class="gif">
+          <img class="img1" src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1512191194/1512191192.jpg" width="100" height="100" alt="resume" class="gif">
+          <img class="img1" src="https://i.pinimg.com/originals/c6/d0/7c/c6d07c8e5fd5eabee04c96694e370432.gif" width="100" height="100" alt="people" class="gif">
+          <br>
+        </div>
+        <p><button style="background-color:#fdf2e9 ;" type="button" class="button btn-outline-light btn-lg download-button"><b><a style="color:black  ;"href="base">Get Started</a></b></button></p>
+        <div class="carousel" style="background-color:#fdf2e9 ">
+          <div class="carousel-inner" style="width: 100%; ">
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item">
+              <h2 class="carousel" style="color: black">Quest makes Craigslist easier to use.There are a ton of added features to make browsing, searching and posting on Craigslist, smooth, effective and it is absolutely free.</h2>
+              <img src="{% static 'images/t5.jpg'%}">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+              <h2 class="carousel" style="color:black "> Multiple display modes for Search Results: Photo+description view, photo grid view, photo album view, map view and big photo view.</h2>
+              <img src="{% static 'images/t2.png'%}">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+              <h2 class="carousel" style="color: black">Geo-location enables you to automatically find nearby cities.</h2>
+              <img src="{% static 'images/t3.png'%}">
+            </div>
+            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+            <label for="carousel-2" class="carousel-control next control-1">›</label>
+            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+            <label for="carousel-3" class="carousel-control next control-2">›</label>
+            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+            <label for="carousel-1" class="carousel-control next control-3">›</label>
+          </div>
+        </div ><div class="row">
+        <div class="col-lg-6">
+          <h1>Download the app here!</h1>
+          <button style="background-color:#d7dddb ;" type="button" class="button btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button style="background-color:#d7dddb ;" type="button" class="button btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+        </div>
+
+        <footer class="white-section" id="footer">
+          <div class="container-fluid">
+            <i class="social-icon fab fa-facebook-f"></i>
+            <i class="social-icon fab fa-twitter"></i>
+            <i class="social-icon fab fa-instagram"></i>
+            <i class="social-icon fas fa-envelope"></i>
+            <p>© Copyright 2020 Quest</p>
+          </div>
+        </footer>
+      </center>
+</body>
+</html>

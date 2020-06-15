@@ -1,0 +1,90 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Posts</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <style>
+
+        .data{
+        position: absolute;
+        }
+
+    </style>
+</head>
+<body style="background-color: #d7dddb ; background-repeat: no-repeat;">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="base"><i class="fas fa-chevron-left"></i></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+    <div style="color: black;">
+
+        {% if post %}
+            {% for k in post %}
+            <table border="0px" width="200px">
+            <tr>
+                <td>First Name</td>
+                <td class="data">{{ k.firstname }}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td class="data">{{ k.lastname }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td class="data">{{ k.email}}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td class="data">{{ k.phone }}</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td class="data">{{ k.country }}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td class="data">{{ k.city }}</td>
+            </tr>
+                <tr>
+                <td>Category</td>
+                <td class="data">{{ k.category }}</td>
+            </tr>
+                <tr>
+                <td>Post Title</td>
+                <td class="data">{{ k.posttitle }}</td>
+            </tr>
+                <tr>
+                <td>Description</td>
+                <td class="data">{{ k.description }}</td>
+            </tr>
+                <tr>
+                <td style="width: 300px; height: 300px;">Add Image</td>
+                <td class="data">{% if k.image %}
+                  <img src="{{ k.image.url }}">
+                  {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td class="data">{{ k.price }}</td>
+            </tr>
+            </table>
+        <br><br>
+
+        <hr>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

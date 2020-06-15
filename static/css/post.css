@@ -1,0 +1,34 @@
+.heading{
+  color: #C077A9;
+  margin-bottom: 75px;
+  font-size: 80px;
+  font-style: san-serif;
+}
+
+.inputData input{
+  margin-left: 10em;
+}
+
+.inputData label{
+  position: absolute;
+  left: 50px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.right {
+  position: relative;
+  right: -400px;
+  top: -320px;
+}
+
+button {
+  padding: 20px;
+  font-size: 30px;
+  margin: 50px;
+  border: 1px solid black;
+}
+button:hover {
+  background-color:white;
+}
